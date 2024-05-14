@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Socket IO Course</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+        //we can get the inbuilt event by using message name on client side
+        // socket.on('message', (data) => {
+        //     document.write(data.Job)
+        // })
+        //we can get the custom event by using same name on client side
+        //.on method used to catch the events . client or server side for the same purpose
+        // socket.on('myEvent', (data) => {
+        //     document.write(data)
+        // })
+
+        //sending data to the server side from client side
+        // socket.emit('customEvent', { msg: "Hum Antim me Ayenge" })
+
+        //Recieving Broadcast event
+        // socket.on('newUser', (data) => {
+        //     document.body.innerHTML = "";
+        //     document.write(data)
+        // })
+
+        //Recieveing rooms chat event 
+
+        socket.on('roomChat', (data) => {
+            document.body.innerHTML = "";
+            document.write(data)
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: blue; background-color: aqua; text-align: center;">Welcome Everybody to my chat application
+        </h1>
+    </div>
+
+</body>
+
+</html>

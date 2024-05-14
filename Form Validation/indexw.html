@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation in JavaScript</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Form Validation in JavaScript</h2>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <div>
+
+                <form action="http://127.0.0.1:5500/index.html" name="myForm" onsubmit="return validateForm()">
+                    <div class="form">
+                        <div class="inp">
+                            <label for="userName">Name<span class="star">*</span></label>
+                            <div class="input-container">
+                                <input onkeyup="validateForm()" placeholder="Enter Your Name" type="text" name="name"
+                                    id="userName" class="nameInp">
+                                <img src="Error_Icon.png" id="img1" alt="">
+                            </div>
+                        </div>
+
+                        <P id="hideError">Name Must be at least 5 characters *</P>
+
+                        <div class="inp">
+                            <label for="gmail">Gmail<span class="star">*</span></label>
+                            <input onkeyup="validateForm()" placeholder="Enter Your E-mail" type="text" name=""
+                                class="nameInp" id="gmail">
+                        </div>
+                        <P id="hideEmail">Email is not Valid *</P>
+
+                        <div class="inp">
+                            <label for="aadhar">Aadhar<span class="star">*</span></label>
+                            <input onkeyup="validateForm()" id="aadhar" placeholder="Enter Aadhar Number" type="number"
+                                name="" class="nameInp">
+                        </div>
+                        <P id="hideAadhar">Aadhar Number must be 12 Digits *</P>
+
+                        <div class="inp">
+                            <label for="city">City</label>
+                            <input onkeyup="validateForm()" placeholder="Enter City" type="text" name=""
+                                class="nameInpp">
+                        </div>
+                        <div class="inp">
+                            <label for="PAN">PAN<span class="star">*</span></label>
+                            <input onkeyup="validateForm()" id="PAN" placeholder="Enter PAN Number" type="text" name=""
+                                class="nameInp">
+                        </div>
+                        <P id="hidePAN">PAN Number is not Valid *</P>
+
+                        <div class="inp">
+                            <label for="phone">Phone<span class="star">*</span></label>
+                            <input onkeyup="validateForm()" placeholder="Enter Phone Number" type="number" name=""
+                                class="nameInp" id="phone">
+                        </div>
+                        <P id="hidePhone">Phone Number is not Valid *</P>
+
+                        <div class="submitButton">
+                            <input onkeyup="validateForm()" type="submit" value="Register" id="register">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>
